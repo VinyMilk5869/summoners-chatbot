@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Summoners Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            height: 90vh;
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .header {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .description {
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: #1b1b1b;
+            border-bottom: 1px solid #333;
+        }
+
+        .iframe-container {
+            flex: 1;
+            background-color: #000;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer {
+            padding: 8px;
+            font-size: 12px;
+            text-align: center;
+            background-color: #111;
+            border-top: 1px solid #333;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        🤖 Summoners Chatbot – League of Legends
+    </div>
+
+    <div class="description">
+        Asistente conversacional sobre League of Legends integrado mediante IA externa (Language Studio).
+        Puedes preguntar sobre roles, campeones, objetos y estrategias.
+    </div>
+
+    <div class="iframe-container">
+        <!-- 🔽 PEGA AQUÍ EL IFRAME DE LANGUAGE STUDIO 🔽 -->
+        <iframe 
+            src=""
+            title="Summoners Chatbot IA">
+        </iframe>
+    </div>
+
+    <div class="footer">
+        Proyecto académico · Sistema de preguntas y respuestas · GitHub Pages
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+# -------------------
+# ROLES
+# -------------------
+¿Cuál es la función del top laner? -> Controlar la línea superior, absorber daño y participar en peleas en equipo.
+¿Qué hace un mid laner en la partida? -> Infligir daño, controlar oleadas y ayudar a otras líneas con roaming.
+¿Qué responsabilidades tiene el jungla? -> Controlar monstruos neutrales, hacer ganks y asegurar objetivos como dragones y Barón Nashor.
+¿Qué diferencia hay entre ADC y support? -> El ADC inflige daño a distancia y escala en late game, mientras que el support protege y coloca visión.
+¿Qué rol tiene más impacto en early game? -> El jungla, por su capacidad de influir en líneas y objetivos.
+¿Qué rol escala mejor en late game? -> ADCs y algunos mid laners, debido a su daño sostenido.
+¿Qué hace un support de peel? -> Protege a los carries del enemigo usando control de masas y habilidades defensivas.
+¿Por qué algunos top laners eligen campeones tanque? -> Para absorber daño y ser iniciadores en peleas de equipo.
+¿Qué hace un jungla agresivo? -> Busca invadir la jungla enemiga y hacer ganks tempranos para conseguir ventaja.
+¿Cuándo un support debe iniciar peleas? -> Cuando el equipo tiene ventaja numérica o control de visión.
+
+# -------------------
+# CAMPEONES Y META
+# -------------------
+¿Qué campeones ADC son fuertes en el meta actual? -> Jinx, Kai’Sa, Aphelios y Vayne.
+¿Qué campeones support son fuertes en el meta actual? -> Leona, Thresh, Rell y Nami.
+¿Qué campeones top son fuertes en el meta actual? -> Malphite, Garen, Fiora y Ornn.
+¿Qué campeones mid son fuertes en el meta actual? -> Ahri, Yasuo, Diana y Zed.
+¿Qué campeones jungla son fuertes en el meta actual? -> Rammus, Hecarim, Lee Sin y Lillia.
+¿Qué campeones mid son buenos para roaming? -> Twisted Fate, LeBlanc, Talon y Ahri.
+¿Qué campeones top escalan bien a late game? -> Fiora, Garen y Ornn.
+¿Qué campeones ADC escalan mejor a late game? -> Jinx, Kai’Sa y Vayne.
+¿Qué campeones support ofrecen mejor peel? -> Janna, Lulu, Thresh y Rell.
+¿Qué campeones jungla son buenos para iniciaciones? -> Rammus, Hecarim y Sejuani.
+
+# -------------------
+# OBJETOS (META 2026)
+# -------------------
+¿Qué hace **Fiendhunter Bolts**? -> Aumenta el daño de ataque, velocidad de ataque y hace daño verdadero adicional por acumulación.
+¿Qué hace **Hexoptics C44**? -> Incrementa velocidad de ataque, crítico y daño adicional a enemigos ralentizados.
+¿Qué hace **Manamune**? -> Daño de ataque, maná máximo y evoluciona a Muramana al acumular daño.
+¿Qué hace **Eclipse**? -> Daño físico, letalidad y escudo al golpear enemigos con habilidades o ataques básicos.
+¿Qué hace **Locket of the Iron Solari**? -> Proporciona un escudo a aliados cercanos al activarlo.
+¿Qué hace **Turbo Chemtank**? -> Salud y activa de movimiento rápido hacia enemigos para iniciar peleas.
+¿Qué hace **Moonstone Renewer**? -> Sanación gradual para aliados cercanos en peleas prolongadas.
+¿Qué hace **Night Harvester**? -> Daño burst y velocidad de movimiento al golpear enemigos con habilidades.
+¿Qué hace **Black Cleaver**? -> Reduce la armadura enemiga y otorga vida y daño de ataque.
+¿Qué hace **Zhonya’s Hourglass**? -> Activa stasis que hace invulnerable temporalmente.
+¿Qué hace **Guardian Angel**? -> Revive al morir una vez.
+¿Qué hace **Morellonomicon**? -> Otorga vida, poder de habilidad y aplica heridas graves a enemigos.
+¿Qué hace **Serylda’s Grudge**? -> Penetración de armadura y ralentización con habilidades.
+¿Qué hace **Spirit Visage**? -> Aumenta vida, resistencia mágica y mejora curaciones recibidas.
+¿Qué hace **Thornmail**? -> Devuelve daño al atacante y aplica heridas graves.
+
+# -------------------
+# ESTRATEGIA
+# -------------------
+¿Qué significa “pokeear”? -> Golpear enemigos desde distancia para desgastarlos antes de iniciar peleas.
+¿Qué es un “kite”? -> Atacar mientras te mueves para mantener distancia segura del enemigo.
+¿Qué significa “split push”? -> Presionar una línea alejada del equipo para atraer enemigos y crear ventajas numéricas.
+¿Qué es “peel”? -> Proteger a los carries usando control de masas y ralentizaciones.
+¿Qué es “visión profunda”? -> Colocar wards avanzados para ver rotaciones enemigas.
+¿Qué es un reset de habilidades? -> Habilidad que reinicia el cooldown de otras habilidades tras una kill o asistencia.
+¿Por qué es importante negar farm al enemigo? -> Reduce oro y experiencia del equipo enemigo, dando ventaja a tu equipo.
+¿Cómo afecta la curación en peleas largas? -> Permite sostener al equipo más tiempo durante enfrentamientos.
+¿Cuándo debes hacer dragón? -> Cuando el equipo tiene ventaja numérica y visión controlada.
+¿Cuándo debes hacer Barón Nashor? -> Cuando el equipo tiene visión segura y control de oleadas.
+
+# -------------------
+# FASES DE PARTIDA
+# -------------------
+¿Qué es el early game? -> Fase inicial donde se farmear, ganar kills tempranas y asegurar visión básica.
+¿Qué es el mid game? -> Fase media donde rotaciones y peleas por objetivos comienzan a definir ventaja.
+¿Qué es el late game? -> Fase final donde las peleas en equipo deciden la victoria.
+¿Qué hacer en early game si vas ganando? -> Mantener presión de línea y visión, evitando riesgos innecesarios.
+¿Qué hacer en mid game? -> Rotar entre líneas, tomar objetivos y asegurar pequeñas ventajas.
+¿Cómo cambia la estrategia en late game? -> Priorizar visión profunda y peleas cuidadosamente iniciadas.
+¿Por qué es clave controlar dragones en mid game? -> Cada dragón otorga bonificaciones permanentes que fortalecen al equipo.
+¿Qué errores son comunes en early game? -> Sobreextender, morir sin necesidad y perder minions.
+¿Cómo impacta la visión en peleas de equipo? -> Permite decidir cuándo pelear y evitar emboscadas.
+¿Qué hace un buen posicionamiento en late game? -> Mantener distancia de amenazas y proteger a los carrys.
+
+# -------------------
+# CONCEPTOS GENERALES
+# -------------------
+¿Qué es farmear? -> Matar súbditos y monstruos para obtener oro y experiencia.
+¿Por qué es importante el oro? -> Permite comprar objetos y mejorar efectividad del campeón.
+¿Qué es la experiencia? -> Puntos que suben nivel y desbloquean habilidades.
+¿Qué es el snowball? -> Ventaja acumulada por kills y objetivos que hace que tu equipo crezca más fuerte.
+¿Qué significa feedear? -> Morir repetidamente, dando ventaja al enemigo.
+¿Qué significa jugar safe? -> Evitar riesgos innecesarios para no perder ventaja.
+¿Qué es el KDA? -> Kill / Death / Assist; indicador de desempeño del jugador.
+¿Qué es el matchmaking? -> Sistema que empareja jugadores según nivel de habilidad.
+¿Cómo influye la comunicación en el equipo? -> Coordina ganks, objetivos y peleas para maximizar ventaja.
+¿Qué es el CC? -> Control de masas que limita las acciones de los enemigos.
+
+# -------------------
+# ROLES
+# -------------------
+¿Cuál es la función del jungla en early game? -> Hacer ganks efectivos, asegurar objetivos neutrales y mantener control de visión.
+¿Qué hace un top laner split push? -> Presiona la línea superior sola para atraer enemigos y crear ventaja numérica para su equipo.
+¿Cuándo un mid laner debe roaming? -> Cuando su línea está estable y puede ayudar a otras líneas a conseguir kills o torres.
+¿Cómo debe actuar un ADC si está farmeando? -> Mantener posición segura, farmear consistentemente y evitar morir.
+¿Por qué es importante el soporte en late game? -> Protege a los carrys, controla visión y ayuda en iniciaciones de peleas.
+¿Qué rol suele iniciar peleas en el meta actual? -> Top y jungla tanque suelen ser los iniciadores más comunes.
+¿Cuándo conviene que el jungla haga invades? -> Si tiene ventaja de nivel o visión segura de la jungla enemiga.
+¿Cómo puede un support ganar ventaja temprana? -> Harass al ADC enemigo, control de visión y proteger a su propio ADC.
+¿Qué hace un mid laner asesino? -> Selecciona objetivos prioritarios para eliminarlos rápidamente en peleas.
+¿Cómo ayuda un top laner tanque a su equipo? -> Absorbe daño, inicia peleas y protege a los carries.
+
+# -------------------
+# CAMPEONES Y META
+# -------------------
+¿Qué campeones mid son fuertes contra magos? -> Yasuo, Fizz y Talon son buenos contra campeones AP de burst.
+¿Qué campeones ADC tienen movilidad alta? -> Kai’Sa, Ezreal y Lucian permiten reposicionarse rápido en peleas.
+¿Qué campeones jungla son ideales para ganks tempranos? -> Lee Sin, Elise y Jarvan IV destacan por movilidad y control.
+¿Qué campeones top escalan con daño verdadero? -> Fiora y Camille escalan muy bien con daño verdadero.
+¿Qué campeones support proporcionan escudos y curaciones? -> Janna, Lulu, Nami y Soraka.
+¿Qué campeones mid destacan por burst? -> LeBlanc, Syndra, Ahri y Zed infligen mucho daño rápido.
+¿Qué campeones ADC son fuertes en late game? -> Jinx, Aphelios y Vayne.
+¿Qué campeones jungla son buenos para iniciaciones de teamfight? -> Rammus, Hecarim y Sejuani.
+¿Qué campeones top son split pushers meta? -> Fiora, Camille y Jax.
+¿Qué campeones support destacan en peel? -> Thresh, Rell y Braum.
+
+# -------------------
+# OBJETOS
+# -------------------
+¿Qué hace **Kraken Slayer**? -> Daño de ataque, velocidad de ataque y daño verdadero cada tercer ataque básico.
+¿Qué hace **Ravenous Hydra**? -> Daño en área con ataques básicos y robo de vida.
+¿Qué hace **Sterak’s Gage**? -> Aumenta vida y otorga un escudo temporal al recibir mucho daño.
+¿Qué hace **Death’s Dance**? -> Proporciona daño, curación de daño infligido y retraso de parte del daño recibido.
+¿Qué hace **Guardian’s Edge**? -> Otorga robo de vida, velocidad de ataque y crítico, útil para ADCs.
+¿Qué hace **Trinity Force**? -> Aumenta daño, velocidad de ataque y vida, ideal para campeones cuerpo a cuerpo.
+¿Qué hace **Immortal Shieldbow**? -> Aumenta daño, velocidad de ataque y revive temporalmente con un escudo tras recibir daño letal.
+¿Qué hace **Phantom Dancer**? -> Aumenta velocidad de ataque, crítico y ofrece un escudo pasivo al bajar de vida.
+¿Qué hace **Essence Reaver**? -> Daño de ataque, crítico y reduce enfriamiento de habilidades tras atacar.
+¿Qué hace **Moonstone Renewer**? -> Sanación continua para aliados cercanos durante peleas prolongadas.
+
+# -------------------
+# ESTRATEGIA
+# -------------------
+¿Qué significa “zone control”? -> Controlar un área para negar acceso o posicionamiento al enemigo.
+¿Qué es un “catch” en League? -> Atrapar a un enemigo aislado para eliminarlo rápido.
+¿Qué significa “engage”? -> Iniciar una pelea de equipo de forma planificada.
+¿Qué es “disengage”? -> Evitar o escapar de una pelea que sería desfavorable.
+¿Qué significa “tempo” en League? -> Ritmo de la partida y control de objetivos para mantener ventaja.
+¿Qué es “denegar oleadas”? -> Evitar que los enemigos farmeen minions eficientemente.
+¿Por qué es importante la prioridad de oleadas? -> Permite decidir cuándo rotar y tomar objetivos.
+¿Cómo se puede maximizar la ventaja en mid game? -> Controlando visión, objetivos y peleas favorables.
+¿Qué errores evita un ADC posicionado correctamente? -> Ser atrapado, morir innecesariamente y perder DPS en peleas.
+¿Por qué es clave wardear antes de dragón o Barón? -> Para prevenir emboscadas y asegurar control del objetivo.
+
+# -------------------
+# FASES DE PARTIDA
+# -------------------
+¿Qué hacer en early game si pierdes línea? -> Jugar seguro, farmear bajo torre y pedir ayuda al jungla.
+¿Cuándo es mejor hacer roam desde mid? -> Cuando tu línea está empujada y puedes impactar otra línea.
+¿Qué es una rotación segura? -> Moverse entre líneas con visión y ventaja numérica.
+¿Qué errores comunes hay en mid game? -> Peleas descoordinadas, sobreextenderse y perder visión.
+¿Por qué es importante priorizar torres en mid game? -> Ayuda a abrir el mapa y facilitar control de objetivos.
+¿Qué es “tempo de objetivos”? -> Coordinar la toma de dragones, heraldos y Barón según ventaja del equipo.
+¿Cómo cambia la estrategia en late game si tu equipo tiene un ADC fuerte? -> Proteger al ADC y pelear solo cuando esté bien posicionado.
+¿Qué es una pelea de objetivos? -> Pelea enfocada en dragón, Barón o torre más que en kills.
+¿Por qué es importante farmear en late game? -> Cada item y oro adicional aumenta significativamente tu impacto.
+¿Qué significa “jugar seguro” en late game? -> Evitar riesgos y mantener distancia de amenazas.
+
+# -------------------
+# CONCEPTOS GENERALES
+# -------------------
+¿Qué es un “buff”? -> Mejora temporal o permanente que da ventaja al campeón o equipo.
+¿Qué es un “nerf”? -> Reducción de efectividad de un campeón, objeto o habilidad.
+¿Qué significa “meta” en League? -> Estrategia predominante y campeones/objetos más efectivos.
+¿Qué es “counter pick”? -> Elegir un campeón para contrarrestar otro.
+¿Qué es “snowball” en League? -> Acumular ventaja para crecer más fuerte que el enemigo.
+¿Qué es “split push seguro”? -> Presionar una línea sin arriesgarse a ser atrapado.
+¿Qué significa “peel eficiente”? -> Usar habilidades de control para proteger al carry de manera óptima.
+¿Qué es un “reset de summoner”? -> Reutilizar la habilidad de invocador tras morir o usar en un momento estratégico.
+¿Cómo influye la comunicación en mid y late game? -> Coordinar ganks, rotaciones y peleas para maximizar ventaja.
+¿Qué es “CC en área”? -> Habilidades de control de masas que afectan a varios enemigos simultáneamente.
+
+# -------------------
+# ROLES
+# -------------------
+¿Qué hace un jungla tanque? -> Inicia peleas, absorbe daño y protege a los carries durante los enfrentamientos.
+¿Cómo puede un mid laner ayudar en top lane? -> Haciendo roaming para gankear y asegurar kills o presión de torre.
+¿Cuándo debe un ADC rotar a otra línea? -> Si la línea está empujada o el equipo necesita presencia para objetivos.
+¿Por qué es importante el control de visión del support? -> Permite iniciar peleas seguras y prevenir emboscadas.
+¿Qué hace un top laner split pusher meta? -> Presiona líneas, atrae enemigos y abre el mapa para su equipo.
+¿Cómo actúa un support agresivo? -> Harass al ADC enemigo, toma control de visión y busca kills tempranas.
+¿Qué hace un jungla AP? -> Inflige daño mágico, ayuda a peleas tempranas y controla objetivos con burst.
+¿Cuándo un ADC debe entrar en pelea? -> Cuando los protectores están cerca y el equipo tiene ventaja.
+¿Qué hace un mid laner tanque? -> Absorbe daño en peleas de equipo y protege a los carries.
+¿Cómo puede un jungla maximizar farm en early game? -> Alternando entre campamentos y ganks, sin perder control de objetivos.
+
+# -------------------
+# CAMPEONES Y META
+# -------------------
+¿Qué campeones mid son fuertes contra asesinos? -> Orianna, Lissandra y Galio.
+¿Qué campeones ADC destacan por rango largo? -> Jhin, Ashe y Aphelios.
+¿Qué campeones jungla son buenos para invades? -> Lee Sin, Jarvan IV y Elise.
+¿Qué campeones top son buenos contra campeones de burst? -> Malphite, Ornn y Garen.
+¿Qué campeones support destacan en poke? -> Karma, Zyra y Senna.
+¿Qué campeones mid escalan mejor a late game? -> Syndra, Orianna y Zoe.
+¿Qué campeones ADC son meta para combates de equipo? -> Jinx, Aphelios y Kai’Sa.
+¿Qué campeones jungla son ideales para peel? -> Rammus, Sejuani y Zac.
+¿Qué campeones top son meta para engage? -> Malphite, Ornn y Sett.
+¿Qué campeones support son fuertes en initiación? -> Leona, Nautilus y Rell.
+
+# -------------------
+# OBJETOS
+# -------------------
+¿Qué hace **Bloodthirster**? -> Aumenta daño de ataque y proporciona robo de vida.
+¿Qué hace **Infinity Edge**? -> Aumenta crítico y daño de ataques básicos.
+¿Qué hace **Rabadon’s Deathcap**? -> Aumenta poder de habilidad de manera significativa.
+¿Qué hace **Cosmic Drive**? -> Aumenta velocidad de habilidad, AP y velocidad de movimiento.
+¿Qué hace **Hextech Rocketbelt**? -> Daño mágico, velocidad de movimiento y dash corto.
+¿Qué hace **Prowler’s Claw**? -> Letalidad, daño de ataque y activa dash con burst a un enemigo.
+¿Qué hace **Edge of Night**? -> Daño, letalidad y escudo de hechizo que bloquea la próxima habilidad enemiga.
+¿Qué hace **Sterak’s Gage**? -> Vida extra y escudo al recibir mucho daño.
+¿Qué hace **Death’s Dance**? -> Daño, curación de daño infligido y retraso de parte del daño recibido.
+¿Qué hace **Trinity Force**? -> Vida, daño y velocidad de ataque para campeones cuerpo a cuerpo.
+
+# -------------------
+# ESTRATEGIA
+# -------------------
+¿Qué significa “hard engage”? -> Iniciar una pelea de forma decisiva, comprometiéndose completamente.
+¿Qué es un “peel” eficiente en late game? -> Proteger a los carrys evitando que mueran en peleas.
+¿Qué significa “macro play”? -> Tomar decisiones a gran escala como objetivos, rotaciones y control de mapa.
+¿Qué significa “micro play”? -> Decisiones individuales, posicionamiento y combos de habilidades.
+¿Qué es “vision control”? -> Colocar y limpiar wards para tener ventaja en mapa.
+¿Por qué es importante hacer trade en línea? -> Obtener ventaja de vida, presión y control de oleadas.
+¿Qué significa “denegar farm”? -> Evitar que el enemigo obtenga oro y experiencia de minions.
+¿Por qué se prioriza un objetivo grande sobre kills? -> Porque provee mejoras permanentes y ventaja estratégica.
+¿Qué es “snowballing”? -> Aprovechar una ventaja temprana para dominar el juego.
+¿Cómo se mide la ventaja de un equipo? -> Comparando kills, torres, dragones y Barón Nashor.
+
+# -------------------
+# FASES DE PARTIDA
+# -------------------
+¿Qué debe hacer un ADC en early game? -> Farmear seguro, evitar morir y apoyar ganks del jungla.
+¿Qué hace un mid laner en mid game? -> Rotar a otras líneas y controlar oleadas y objetivos.
+¿Cuándo se considera seguro hacer dragón? -> Cuando el enemigo está lejos o muerto y tienes visión controlada.
+¿Cómo se asegura una torre en mid game? -> Empujando la línea con minions y presión de habilidades.
+¿Qué es una “power spike”? -> Momento donde un campeón tiene ventaja de daño o utilidad por items o nivel.
+¿Cómo cambia la estrategia en late game si tu ADC muere? -> Evitar peleas hasta que el ADC recupere ventaja.
+¿Qué errores son frecuentes en early game? -> Sobreextender, perder minions y morir innecesariamente.
+¿Cómo afecta la posición del jungla en late game? -> Decide qué línea proteger y dónde iniciar peleas.
+¿Por qué es importante mantener visión en late game? -> Para anticipar movimientos enemigos y evitar emboscadas.
+¿Qué hace un equipo con ventaja de oro en mid game? -> Tomar torres, dragones y presionar visión enemiga.
+
+# -------------------
+# CONCEPTOS GENERALES
+# -------------------
+¿Qué es un “reset de habilidades” en League? -> Cuando una kill o asistencia reinicia el cooldown de otras habilidades.
+¿Qué es un “objective control”? -> Mantener dominio sobre dragones, barón y torres.
+¿Qué es un “soft engage”? -> Intentar iniciar pelea sin comprometerse completamente.
+¿Qué significa “team coordination”? -> Trabajar juntos para maximizar ventaja en peleas y objetivos.
+¿Qué es un “counter jungle”? -> Entrar a la jungla enemiga para robar recursos.
+¿Qué es “scaling”? -> Cómo un campeón mejora con items o niveles a lo largo de la partida.
+¿Qué significa “poke sustain”? -> Desgastar al enemigo a distancia mientras se mantiene seguro.
+¿Qué es “win condition”? -> Estrategia o ventaja que define cómo ganar la partida.
+¿Qué es “positioning” en peleas de equipo? -> Ubicación estratégica de campeones para maximizar DPS y minimizar riesgo.
+¿Qué significa “itemization” correcta? -> Elegir items que contrarresten al equipo enemigo y potencien tu campeón.
+
+# -------------------
+# ITEMS Y RUNAS – ADC
+# -------------------
+¿Cuál es la build típica de Jinx ADC en Season 2026? -> Fiendhunter Bolts, Hexoptics C44, Infinity Edge, Phantom Dancer, Guardian’s Edge, Bloodthirster.
+¿Cuál es la build típica de Kai’Sa ADC? -> Manamune, Kraken Slayer, Guinsoo’s Rageblade, Phantom Dancer, Serylda’s Grudge, Guardian Angel.
+¿Cuál es la build típica de Vayne ADC? -> Blade of the Ruined King, Guinsoo’s Rageblade, Phantom Dancer, Bloodthirster, Infinity Edge, Guardian Angel.
+¿Cuál es la runa principal para Jinx ADC? -> Conquistador para daño sostenido en peleas largas.
+¿Cuál es la runa secundaria para Jinx? -> Celeridad y Curación Absoluta para movilidad y supervivencia.
+¿Cuál es la runa principal para Kai’Sa ADC? -> Conquistador o Cometa Arcano, dependiendo de matchup.
+¿Cuál es la runa secundaria para Kai’Sa? -> Celeridad y Recarga de Hechizos para movilidad y burst adicional.
+¿Cuál es la runa principal para Vayne ADC? -> Conquistador, para potenciar daño verdadero.
+¿Cuál es la runa secundaria para Vayne? -> Celeridad y Recarga de Hechizos, para supervivencia y movilidad.
+¿Qué objetos son esenciales para ADCs de late game? -> Infinity Edge, Phantom Dancer, Guardian Angel y Bloodthirster.
+
+# -------------------
+# ITEMS Y RUNAS – MID LANERS
+# -------------------
+¿Cuál es la build típica de Ahri Mid? -> Luden’s Tempest, Shadowflame, Zhonya’s Hourglass, Morellonomicon, Rabadon’s Deathcap, Sorcerer’s Shoes.
+¿Cuál es la runa principal para Ahri? -> Cometa Arcano, para poke y burst a distancia.
+¿Cuál es la runa secundaria para Ahri? -> Trascendencia y Celeridad, para reducir cooldowns y movilidad.
+¿Cuál es la build típica de Yasuo Mid? -> Immortal Shieldbow, Phantom Dancer, Infinity Edge, Death’s Dance, Guardian Angel, Berserker’s Greaves.
+¿Cuál es la runa principal para Yasuo? -> Conquistador, para escalar en peleas largas.
+¿Cuál es la runa secundaria para Yasuo? -> Tenacidad y Velocidad de Movimiento, para sobrevivir y reposicionarse.
+¿Cuál es la build típica de Zed Mid? -> Youmuu’s Ghostblade, Duskblade of Draktharr, Edge of Night, Serylda’s Grudge, Guardian Angel, Ionian Boots.
+¿Cuál es la runa principal para Zed? -> Electrocute, para burst rápido a enemigos.
+¿Cuál es la runa secundaria para Zed? -> Colección de Globos Oculares y Celeridad, para daño y movilidad.
+¿Qué items de AP son esenciales en mid lane? -> Luden’s Tempest, Shadowflame, Zhonya’s Hourglass y Rabadon’s Deathcap.
+¿Qué runas favorecen campeones de burst? -> Electrocute, Cometa Arcano y Impacto Repentino, según matchup.
+
+# -------------------
+# ITEMS Y RUNAS – TOP LANERS
+# -------------------
+¿Cuál es la build típica de Malphite Top? -> Sunfire Aegis, Thornmail, Abyssal Mask, Randuin’s Omen, Spirit Visage, Plated Steelcaps.
+¿Cuál es la runa principal de Malphite? -> Aftershock, para aguantar daño y potenciar control de masas.
+¿Cuál es la runa secundaria de Malphite? -> Fuente de Vida y Tenacidad, para resistencia y supervivencia.
+¿Cuál es la build típica de Fiora Top? -> Divine Sunderer, Ravenous Hydra, Sterak’s Gage, Death’s Dance, Guardian Angel, Plated Steelcaps.
+¿Cuál es la runa principal de Fiora? -> Conquistador, para daño sostenido y duelos.
+¿Cuál es la runa secundaria de Fiora? -> Tenacidad y Velocidad de Movimiento, para supervivencia y reposicionamiento.
+¿Qué items son esenciales para top laners tanque? -> Sunfire Aegis, Thornmail, Spirit Visage y Randuin’s Omen.
+¿Qué items son esenciales para top laners duelistas? -> Divine Sunderer, Ravenous Hydra, Sterak’s Gage y Death’s Dance.
+¿Qué runas favorecen a top laners tanque? -> Aftershock o Guardian, para aguantar daño.
+¿Qué runas favorecen a top laners duelistas? -> Conquistador, para maximizar daño sostenido.
+
+# -------------------
+# ITEMS Y RUNAS – JUNGLERS
+# -------------------
+¿Cuál es la build típica de Rammus Jungle? -> Turbo Chemtank, Thornmail, Abyssal Mask, Dead Man’s Plate, Spirit Visage, Plated Steelcaps.
+¿Cuál es la runa principal de Rammus? -> Aftershock, para resistir daño al iniciar peleas.
+¿Cuál es la runa secundaria de Rammus? -> Fuente de Vida y Tenacidad, para aguantar más tiempo en peleas.
+¿Cuál es la build típica de Hecarim Jungle? -> Turbo Chemtank, Spirit Visage, Dead Man’s Plate, Sterak’s Gage, Thornmail, Boots.
+¿Cuál es la runa principal de Hecarim? -> Conquistador, para daño sostenido y duelos.
+¿Cuál es la runa secundaria de Hecarim? -> Celeridad y Recarga de Hechizos, para movilidad y spam de habilidades.
+¿Cuál es la build típica de Lee Sin Jungle? -> Goredrinker, Black Cleaver, Sterak’s Gage, Death’s Dance, Guardian Angel, Boots of Mobility.
+¿Cuál es la runa principal de Lee Sin? -> Conquistador, para escalar en peleas largas.
+¿Cuál es la runa secundaria de Lee Sin? -> Tenacidad y Velocidad de Movimiento, para reposicionarse y sobrevivir.
+¿Qué items son esenciales para junglas de iniciación? -> Turbo Chemtank, Dead Man’s Plate y Thornmail.
+¿Qué items son esenciales para junglas de daño físico? -> Goredrinker, Black Cleaver, Death’s Dance y Guardian Angel.
+¿Qué runas favorecen a junglas tanque? -> Aftershock y Fuente de Vida.
+¿Qué runas favorecen a junglas de daño? -> Conquistador y Celeridad.
+
+# -------------------
+# ITEMS Y RUNAS – GENERAL
+# -------------------
+¿Qué runas favorecen poke y sustain? -> Cometa Arcano, Orbe Ancestral y Trascendencia.
+¿Qué runas favorecen burst y kill pressure? -> Electrocute, Impacto Repentino y Colección de Globos Oculares.
+¿Qué items favorecen movilidad en peleas? -> Turbo Chemtank, Youmuu’s Ghostblade, Hextech Rocketbelt.
+¿Qué items favorecen sustain en ADCs? -> Bloodthirster, Guardian’s Edge y Ravenous Hydra.
+¿Qué runas favorecen duelos 1v1? -> Conquistador o Electrocute, según tipo de campeón.
+¿Qué items son esenciales para supervivencia? -> Sterak’s Gage, Guardian Angel, Spirit Visage y Thornmail.
+¿Qué runas permiten mayor movilidad? -> Celeridad y Trascendencia.
+
+# -------------------
+# ADC – COMPOSICIONES DE ITEMS Y RUNAS
+# -------------------
+¿Cuál es la build típica de Aphelios ADC? -> Kraken Slayer, Guinsoo’s Rageblade, Infinity Edge, Runaan’s Hurricane, Guardian Angel, Bloodthirster.
+¿Cuál es la runa principal de Aphelios? -> Conquistador, para daño sostenido en peleas largas.
+¿Cuál es la runa secundaria de Aphelios? -> Celeridad y Curación Absoluta para movilidad y supervivencia.
+¿Cuál es la build típica de Jhin ADC? -> Galeforce, Infinity Edge, Rapid Firecannon, Mortal Reminder, Guardian Angel, Phantom Dancer.
+¿Cuál es la runa principal de Jhin? -> Cometa Arcano, para poke y daño a distancia.
+¿Cuál es la runa secundaria de Jhin? -> Trascendencia y Celeridad, para movilidad y reducción de enfriamientos.
+¿Cuál es la build típica de Miss Fortune ADC? -> Kraken Slayer, Immortal Shieldbow, Infinity Edge, Rapid Firecannon, Guardian Angel, Bloodthirster.
+¿Cuál es la runa principal de Miss Fortune? -> Conquistador, para escalar en daño sostenido.
+¿Cuál es la runa secundaria de Miss Fortune? -> Celeridad y Recarga de Hechizos para más movilidad y DPS.
+¿Cuál es la build típica de Sivir ADC? -> Kraken Slayer, Guinsoo’s Rageblade, Infinity Edge, Phantom Dancer, Guardian Angel, Bloodthirster.
+¿Cuál es la runa principal de Sivir? -> Conquistador.
+¿Cuál es la runa secundaria de Sivir? -> Trascendencia y Celeridad.
+
+# -------------------
+# MID LANERS – COMPOSICIONES DE ITEMS Y RUNAS
+# -------------------
+¿Cuál es la build típica de Syndra Mid? -> Luden’s Tempest, Shadowflame, Zhonya’s Hourglass, Morellonomicon, Rabadon’s Deathcap, Sorcerer’s Shoes.
+¿Cuál es la runa principal de Syndra? -> Cometa Arcano.
+¿Cuál es la runa secundaria de Syndra? -> Trascendencia y Celeridad.
+¿Cuál es la build típica de Orianna Mid? -> Luden’s Tempest, Zhonya’s Hourglass, Shadowflame, Morellonomicon, Rabadon’s Deathcap, Sorcerer’s Shoes.
+¿Cuál es la runa principal de Orianna? -> Cometa Arcano.
+¿Cuál es la runa secundaria de Orianna? -> Trascendencia y Celeridad.
+¿Cuál es la build típica de LeBlanc Mid? -> Luden’s Tempest, Shadowflame, Morellonomicon, Zhonya’s Hourglass, Rabadon’s Deathcap, Sorcerer’s Shoes.
+¿Cuál es la runa principal de LeBlanc? -> Electrocute, para burst rápido.
+¿Cuál es la runa secundaria de LeBlanc? -> Impacto Repentino y Colección de Globos Oculares.
+¿Cuál es la build típica de Zed Mid? -> Youmuu’s Ghostblade, Duskblade of Draktharr, Edge of Night, Serylda’s Grudge, Guardian Angel, Ionian Boots.
+¿Cuál es la runa principal de Zed? -> Electrocute.
+¿Cuál es la runa secundaria de Zed? -> Celeridad y Colección de Globos Oculares.
+
+# -------------------
+# TOP LANERS – COMPOSICIONES DE ITEMS Y RUNAS
+# -------------------
+¿Cuál es la build típica de Garen Top? -> Black Cleaver, Sterak’s Gage, Dead Man’s Plate, Spirit Visage, Thornmail, Plated Steelcaps.
+¿Cuál es la runa principal de Garen? -> Conquistador.
+¿Cuál es la runa secundaria de Garen? -> Tenacidad y Velocidad de Movimiento.
+¿Cuál es la build típica de Ornn Top? -> Frostfire Gauntlet, Thornmail, Abyssal Mask, Warmog’s Armor, Spirit Visage, Plated Steelcaps.
+¿Cuál es la runa principal de Ornn? -> Aftershock.
+¿Cuál es la runa secundaria de Ornn? -> Tenacidad y Fuente de Vida.
+¿Cuál es la build típica de Fiora Top? -> Divine Sunderer, Ravenous Hydra, Sterak’s Gage, Death’s Dance, Guardian Angel, Plated Steelcaps.
+¿Cuál es la runa principal de Fiora? -> Conquistador.
+¿Cuál es la runa secundaria de Fiora? -> Tenacidad y Velocidad de Movimiento.
+¿Cuál es la build típica de Camille Top? -> Divine Sunderer, Ravenous Hydra, Sterak’s Gage, Death’s Dance, Guardian Angel, Plated Steelcaps.
+¿Cuál es la runa principal de Camille? -> Conquistador.
+¿Cuál es la runa secundaria de Camille? -> Tenacidad y Velocidad de Movimiento.
+
+# -------------------
+# JUNGLERS – COMPOSICIONES DE ITEMS Y RUNAS
+# -------------------
+¿Cuál es la build típica de Lee Sin Jungle? -> Goredrinker, Black Cleaver, Sterak’s Gage, Death’s Dance, Guardian Angel, Boots of Mobility.
+¿Cuál es la runa principal de Lee Sin? -> Conquistador.
+¿Cuál es la runa secundaria de Lee Sin? -> Tenacidad y Velocidad de Movimiento.
+¿Cuál es la build típica de Hecarim Jungle? -> Turbo Chemtank, Spirit Visage, Dead Man’s Plate, Sterak’s Gage, Thornmail, Boots.
+¿Cuál es la runa principal de Hecarim? -> Conquistador.
+¿Cuál es la runa secundaria de Hecarim? -> Celeridad y Recarga de Hechizos.
+¿Cuál es la build típica de Rammus Jungle? -> Turbo Chemtank, Thornmail, Abyssal Mask, Dead Man’s Plate, Spirit Visage, Plated Steelcaps.
+¿Cuál es la runa principal de Rammus? -> Aftershock.
+¿Cuál es la runa secundaria de Rammus? -> Fuente de Vida y Tenacidad.
+¿Cuál es la build típica de Lillia Jungle? -> Night Harvester, Zhonya’s Hourglass, Shadowflame, Morellonomicon, Cosmic Drive, Sorcerer’s Shoes.
+¿Cuál es la runa principal de Lillia? -> Cometa Arcano.
+¿Cuál es la runa secundaria de Lillia? -> Trascendencia y Celeridad.
+¿Cuál es la build típica de Graves Jungle? -> Eclipse, Black Cleaver, Serylda’s Grudge, Death’s Dance, Guardian Angel, Plated Steelcaps.
+¿Cuál es la runa principal de Graves? -> Conquistador.
+¿Cuál es la runa secundaria de Graves? -> Tenacidad y Recarga de Hechizos.
+
+# -------------------
+# SUPPORTS – COMPOSICIONES DE ITEMS Y RUNAS
+# -------------------
+¿Cuál es la build típica de Leona Support? -> Locket of the Iron Solari, Knight’s Vow, Zeke’s Convergence, Protector’s Vow, Thornmail, Boots of Mobility.
+¿Cuál es la runa principal de Leona? -> Aftershock.
+¿Cuál es la runa secundaria de Leona? -> Fuente de Vida y Tenacidad.
+¿Cuál es la build típica de Thresh Support? -> Shurelya’s Battlesong, Zeke’s Convergence, Redemption, Locket of the Iron Solari, Righteous Glory, Boots of Mobility.
+¿Cuál es la runa principal de Thresh? -> Aftershock.
+¿Cuál es la runa secundaria de Thresh? -> Tenacidad y Fuente de Vida.
+¿Cuál es la build típica de Nami Support? -> Moonstone Renewer, Ardent Censer, Staff of Flowing Water, Mikael’s Blessing, Forbidden Idol, Boots of Mobility.
+¿Cuál es la runa principal de Nami? -> Guardian.
+¿Cuál es la runa secundaria de Nami? -> Celeridad y Recarga de Hechizos.
+¿Cuál es la build típica de Rell Support? -> Locket of the Iron Solari, Shurelya’s Battlesong, Zeke’s Convergence, Thornmail, Knight’s Vow, Boots of Mobility.
+¿Cuál es la runa principal de Rell? -> Aftershock.
+¿Cuál es la runa secundaria de Rell? -> Fuente de Vida y Tenacidad.
+¿Cuál es la build típica de Senna Support/ADC? -> Eclipse, Black Cleaver, Serylda’s Grudge, Muramana, Guardian Angel, Ghostblade.
+¿Cuál es la runa principal de Senna? -> Conquistador.
+¿Cuál es la runa secundaria de Senna? -> Celeridad y Recarga de Hechizos.
