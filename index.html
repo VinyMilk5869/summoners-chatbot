@@ -2,94 +2,115 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Summoners Chatbot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Summoners Chat - League of Legends AI</title>
     <style>
+        /* Paleta de LoL */
+        :root {
+            --lol-blue: #1e3a8a;
+            --lol-gold: #facc15;
+            --lol-purple: #6b21a8;
+            --lol-dark: #0f172a;
+            --lol-light: #f5f5f5;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--lol-dark), var(--lol-purple));
+            color: var(--lol-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 1rem 0;
+            background: var(--lol-blue);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--lol-gold);
+        }
+
+        main {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            width: 100%;
+            padding: 2rem;
         }
 
-        .container {
+        .chat-container {
+            background: rgba(15,23,42,0.9);
+            border-radius: 1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
             width: 100%;
-            max-width: 900px;
-            height: 90vh;
-            background-color: rgba(0,0,0,0.7);
-            border-radius: 15px;
+            max-width: 600px;
+            height: 600px;
+            padding: 1rem;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .header {
-            background-color: #111;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 20px;
-            border-bottom: 1px solid #333;
-        }
-
-        .description {
-            padding: 10px 15px;
-            font-size: 14px;
-            background-color: #1b1b1b;
-            border-bottom: 1px solid #333;
-        }
-
-        .iframe-container {
-            flex: 1;
-            background-color: #000;
         }
 
         iframe {
+            border-radius: 0.75rem;
+            border: none;
             width: 100%;
             height: 100%;
-            border: none;
         }
 
-        .footer {
-            padding: 8px;
-            font-size: 12px;
+        footer {
+            width: 100%;
             text-align: center;
-            background-color: #111;
-            border-top: 1px solid #333;
-            color: #aaa;
+            padding: 1rem 0;
+            background: var(--lol-blue);
+            color: var(--lol-gold);
+            box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
         }
+
+        /* Botones opcionales */
+        .btn {
+            background: var(--lol-gold);
+            color: var(--lol-dark);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
     </style>
 </head>
 <body>
+    <header>
+        <h1>Summoners Chat - LoL AI</h1>
+    </header>
 
-<div class="container">
-    <div class="header">
-        🤖 Summoners Chatbot – League of Legends
-    </div>
+    <main>
+        <div class="chat-container">
+            <!-- Aquí va tu iframe de Azure -->
+            <iframe 
+                src="<iframe src='https://webchat.botframework.com/embed/summoners-chatbot-bot?s=AxsCaLpqcN21n73qJZbnl9GOqaFQjmtPFFNelgHebVSaWKEt0Y10JQQJ99CAACHYHv6AArohAAABAZBS3Sl8.CeDWphPHkObkfH9HU6HIi0ai83Zs8Vez8ORWbYTRffEY6cS5eIAjJQQJ99CAACHYHv6AArohAAABAZBS2mZr'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>"
+                title="Summoners Chat">
+            </iframe>
+        </div>
+    </main>
 
-    <div class="description">
-        Asistente conversacional sobre League of Legends integrado mediante IA externa (Language Studio).
-        Puedes preguntar sobre roles, campeones, objetos y estrategias.
-    </div>
-
-    <div class="iframe-container">
-        <!-- 🔽 PEGA AQUÍ EL IFRAME DE LANGUAGE STUDIO 🔽 -->
-        <iframe 
-            src="<iframe src='https://webchat.botframework.com/embed/summoners-chatbot-bot?s=AxsCaLpqcN21n73qJZbnl9GOqaFQjmtPFFNelgHebVSaWKEt0Y10JQQJ99CAACHYHv6AArohAAABAZBS3Sl8.CeDWphPHkObkfH9HU6HIi0ai83Zs8Vez8ORWbYTRffEY6cS5eIAjJQQJ99CAACHYHv6AArohAAABAZBS2mZr'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>"
-            title="Summoners Chatbot IA">
-        </iframe>
-    </div>
-
-    <div class="footer">
-        Proyecto académico · Sistema de preguntas y respuestas · GitHub Pages
-    </div>
-</div>
-
+    <footer>
+        Diseñado con la paleta de League of Legends | &copy; 2026
+    </footer>
 </body>
 </html>
