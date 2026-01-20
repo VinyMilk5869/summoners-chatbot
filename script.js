@@ -1,22 +1,11 @@
 const endpoint = "https://clurestaurante.cognitiveservices.azure.com/";
 const apiKey = "BtWFDvv7v26a6fHzA7SyG8x21fcuk30ySEq9E6HwUyl2r1csVABHJQQJ99CAACI8hq2XJ3w3AAAaACOGufeY";
-const projectName = "PollosHermanosChat"; // tu proyecto CLU
+const projectName = "CLURestaurante";
 const deploymentName = "production";
 
 const chatInput = document.getElementById("chatInput");
 const sendBtn = document.getElementById("sendBtn");
 const chatOutput = document.getElementById("chatOutput");
-
-sendBtn.addEventListener("click", async () => {
-    const userMessage = chatInput.value;
-    if(!userMessage) return;
-
-    addMessage("Usuario", userMessage);
-    chatInput.value = "";
-
-    const response = await analyzeMessage(userMessage);
-    addMessage("Bot", response);
-});
 
 // Función para agregar mensajes al chat
 function addMessage(sender, text) {
@@ -29,7 +18,7 @@ function addMessage(sender, text) {
 // Función que llama al CLU
 async function analyzeMessage(text) {
     const url = `${endpoint}language/:analyze-conversations?api-version=2023-07-01-preview`;
-    
+
     const body = {
         kind: "Conversation",
         analysisInput: {
@@ -70,3 +59,20 @@ async function analyzeMessage(text) {
         return "Lo siento, hubo un error procesando tu mensaje.";
     }
 }
+
+// Evento click del botón
+sendBtn.addEventListener("click", async () => {
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    addMessage("Usuario", userMessage);
+    chatInput.value = "";
+
+    const botResponse = await analyzeMessage(userMessage);
+    addMessage("Bot", botResponse);
+});
+
+// También permitir presionar Enter
+chatInput.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") sendBtn.click();
+});
