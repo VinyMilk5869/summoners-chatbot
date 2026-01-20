@@ -1,4 +1,4 @@
-const endpoint = "https://clurestaurante.cognitiveservices.azure.com/";
+const endpoint = "https://clurestaurante.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2024-11-15-preview";
 const apiKey = "BtWFDvv7v26a6fHzA7SyG8x21fcuk30ySEq9E6HwUyl2r1csVABHJQQJ99CAACI8hq2XJ3w3AAAaACOGufeY";
 const projectName = "CLURestaurante";
 const deploymentName = "production";
@@ -76,3 +76,4 @@ sendBtn.addEventListener("click", async () => {
 chatInput.addEventListener("keypress", function(e) {
     if(e.key === "Enter") sendBtn.click();
 });
+
