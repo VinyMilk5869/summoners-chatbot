@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Restaurante - CLU</title>
+    <title>Los Pollos Hermanos - Chat Restaurante</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,9 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), url('assets/fondo.png');
+            background-size: cover;
+            background-blend-mode: overlay;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,7 +26,7 @@
         .container {
             width: 100%;
             max-width: 500px;
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -39,11 +41,22 @@
             padding: 20px;
             border-radius: 12px 12px 0 0;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .header img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
         }
 
         .header h1 {
             font-size: 24px;
-            margin-bottom: 5px;
         }
 
         .header p {
@@ -58,6 +71,12 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+        }
+
+        .chat-messages img.decorative {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 10px;
         }
 
         .message {
@@ -212,11 +231,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🍽️ Chat Restaurante</h1>
-            <p>Asistente de pedidos con IA</p>
+            <img src="assets/logo.png" alt="Logo">
+            <div>
+                <h1>Los Pollos Hermanos</h1>
+                <p>Asistente de pedidos con IA</p>
+            </div>
         </div>
 
         <div class="chat-messages" id="messagesContainer">
+            <img class="decorative" src="assets/pollo.jpg" alt="Pollo Decorativo">
             <div class="message bot">
                 <div>
                     <div class="message-content">
@@ -236,7 +259,6 @@
             <button id="sendBtn" onclick="sendMessage()">Enviar</button>
         </div>
     </div>
-
     <script>
         const ENDPOINT = "https://clurestaurante.cognitiveservices.azure.com/";
         const KEY = "BtWFDvv7v26a6fHzA7SyG8x21fcuk30ySEq9E6HwUyl2r1csVABHJQQJ99CAACI8hq2XJ3w3AAAaACOGufeY";
@@ -348,27 +370,27 @@
 
             if (intent === "ConsultarEstadoPedido") {
                 return {
-                    text: "🔍 Tu pedido está en preparación. Para afinar la búsqueda, indícame tu email o la dirección del pedido.",
+                    text: " Tu pedido está en preparación. Para afinar la búsqueda, indícame tu email o la dirección del pedido.",
                     entities: entities
                 };
             }
 
             if (intent === "CancelarPedido") {
                 return {
-                    text: "❌ De acuerdo, tramitando cancelación. Indícame tu email o la dirección del pedido.",
+                    text: " De acuerdo, tramitando cancelación. Indícame tu email o la dirección del pedido.",
                     entities: entities
                 };
             }
 
             if (intent === "Recomendacion") {
                 return {
-                    text: "🌟 Recomendación del día:\n🍝 Tortilla de patatas\n🍗 Pollo al curry\n🥗 Ensalada César",
+                    text: " Recomendación del día:\n Tortilla de patatas\n🍗 Pollo al curry\n Ensalada César",
                     entities: entities
                 };
             }
 
             return {
-                text: "❓ No lo he entendido. ¿Quieres crear un pedido, consultar estado, cancelar o pedir una recomendación?",
+                text: "No lo he entendido. ¿Quieres crear un pedido, consultar estado, cancelar o pedir una recomendación?",
                 entities: {}
             };
         }
@@ -386,7 +408,7 @@
             if (sender === "bot" && Object.keys(entities).length > 0) {
                 const infoDiv = document.createElement("div");
                 infoDiv.className = "message-info";
-                let infoText = "🏷️ Entidades: ";
+                let infoText = " Entidades: ";
                 for (const [key, values] of Object.entries(entities)) {
                     infoText += `${key}: ${values.join(", ")} | `;
                 }
@@ -429,7 +451,7 @@
             } catch (error) {
                 loadingDiv.remove();
                 addMessage(
-                    `<div class="error-message">⚠️ Error: ${error.message}</div>`,
+                    `<div class="error-message">Error: ${error.message}</div>`,
                     "bot"
                 );
             } finally {
@@ -440,3 +462,4 @@
     </script>
 </body>
 </html>
+
