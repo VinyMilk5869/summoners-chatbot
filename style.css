@@ -1,0 +1,93 @@
+:root {
+    --pollo-red: #ff4d00;
+    --pollo-yellow: #ffc107;
+    --pollo-dark: #2c2c2c;
+    --pollo-light: #fff8f0;
+    --pollo-shadow: rgba(0,0,0,0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--pollo-yellow), var(--pollo-red));
+    color: var(--pollo-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--pollo-dark);
+    color: var(--pollo-yellow);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 8px var(--pollo-shadow);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.chat-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    background: var(--pollo-light);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px var(--pollo-shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+iframe {
+    flex: 1;
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.btn {
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    background: var(--pollo-red);
+    color: var(--pollo-light);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: var(--pollo-yellow);
+    color: var(--pollo-dark);
+}
+
+footer {
+    background: var(--pollo-dark);
+    color: var(--pollo-yellow);
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 6px var(--pollo-shadow);
+}
