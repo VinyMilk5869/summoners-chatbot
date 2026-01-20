@@ -3,111 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summoners Chat - League of Legends AI</title>
-    <style>
-        /* Paleta de LoL */
-        :root {
-            --lol-blue: #1e3a8a;
-            --lol-gold: #facc15;
-            --lol-purple: #6b21a8;
-            --lol-dark: #0f172a;
-            --lol-light: #f5f5f5;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--lol-dark), var(--lol-purple));
-            color: var(--lol-light);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            width: 100%;
-            padding: 1rem 0;
-            background: var(--lol-blue);
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: var(--lol-gold);
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 2rem;
-        }
-
-        .chat-container {
-            background: rgba(15,23,42,0.9);
-            border-radius: 1rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-            width: 100%;
-            max-width: 600px;
-            height: 600px;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-        }
-
-        iframe {
-            border-radius: 0.75rem;
-            border: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 1rem 0;
-            background: var(--lol-blue);
-            color: var(--lol-gold);
-            box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
-        }
-
-        /* Botones opcionales */
-        .btn {
-            background: var(--lol-gold);
-            color: var(--lol-dark);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-    </style>
+    <title>Los Pollos Hermanos - Chat Pedidos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Summoners Chat - LoL AI</h1>
+        <h1>Los Pollos Hermanos - Pedidos Online</h1>
+        <p>¡Haz tu pedido fácilmente desde nuestro chat!</p>
     </header>
 
     <main>
         <div class="chat-container">
-            <!-- Aquí va tu iframe de Azure -->
-            <iframe src='https://webchat.botframework.com/embed/summoners-chatbot-bot?s=AxsCaLpqcN21n73qJZbnl9GOqaFQjmtPFFNelgHebVSaWKEt0Y10JQQJ99CAACHYHv6AArohAAABAZBS3Sl8.CeDWphPHkObkfH9HU6HIi0ai83Zs8Vez8ORWbYTRffEY6cS5eIAjJQQJ99CAACHYHv6AArohAAABAZBS2mZr'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+            <iframe id="chatBot" src="" 
+                title="Chat de Los Pollos Hermanos"></iframe>
+            <button class="btn" id="toggleChat">Ocultar/Mostrar Chat</button>
         </div>
     </main>
 
     <footer>
-        Diseñado con la paleta de League of Legends | &copy; 2026
+        &copy; 2026 Los Pollos Hermanos | Todos los derechos reservados
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
