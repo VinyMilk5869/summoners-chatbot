@@ -1,24 +1,131 @@
-const endpoint = "https://clurestaurante.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2024-11-15-preview";
-const apiKey = "2hRyoQIAFvg9WhVDMAM3eRSR4SlNI8WTFUzJPdQdWr0RxJE1XWhCJQQJ99CAACI8hq2XJ3w3AAAaACOGUFDL";
-const projectName = "CLURestaurante";
-const deploymentName = "production";
+// =======================
+// Configuración CLU
+// =======================
+const ENDPOINT = "https://clurestaurante.cognitiveservices.azure.com/";
+const KEY = "BtWFDvv7v26a6fHzA7SyG8x21fcuk30ySEq9E6HwUyl2r1csVABHJQQJ99CAACI8hq2XJ3w3AAAaACOGufeY";
+const PROJECT_NAME = "CLURestaurante";
+const DEPLOYMENT_NAME = "production";
+const API_VERSION = "2023-04-01";
 
-const chatInput = document.getElementById("chatInput");
+const messagesContainer = document.getElementById("messagesContainer");
+const userInput = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
-const chatOutput = document.getElementById("chatOutput");
 
-// Función para agregar mensajes al chat
-function addMessage(sender, text) {
-    const p = document.createElement("p");
-    p.innerHTML = `<strong>${sender}:</strong> ${text}`;
-    chatOutput.appendChild(p);
-    chatOutput.scrollTop = chatOutput.scrollHeight;
+// =======================
+// Función para extraer entidades de la predicción
+// =======================
+function extractEntities(prediction) {
+    const entities = {};
+    for (const ent of prediction.entities || []) {
+        const category = ent.category;
+        const text = ent.text;
+        if (category && text) {
+            if (!entities[category]) entities[category] = [];
+            entities[category].push(text);
+        }
+    }
+    return entities;
 }
 
-// Función que llama al CLU
-async function analyzeMessage(text) {
-    const url = `${endpoint}language/:analyze-conversations?api-version=2023-07-01-preview`;
+// =======================
+// Función para construir la respuesta del bot
+// =======================
+function buildReply(intent, entities) {
+    if (intent === "CrearPedido") {
+        const plato = (entities.plato || [""])[0];
+        const cantidad = (entities.cantidad || ["1"])[0];
+        const ciudad = (entities.ciudad || [""])[0];
+        const fecha = (entities.fecha || [""])[0];
+        const hora = (entities.hora || [""])[0];
+        const direccion = (entities.direccion || [""])[0];
+        const nombre = (entities.nombre_cliente || [""])[0];
+        const email = (entities.email || [""])[0];
 
+        const missing = [];
+        if (!plato) missing.push("plato");
+        if (!cantidad) missing.push("cantidad");
+        if (!ciudad) missing.push("ciudad");
+        if (!fecha) missing.push("fecha");
+        if (!hora) missing.push("hora");
+        if (!direccion) missing.push("dirección");
+        if (!nombre) missing.push("nombre");
+        if (!email) missing.push("email");
+
+        if (missing.length > 0) {
+            return {
+                text: `✏️ Para tramitar el pedido, indícame: ${missing.join(", ")}.`,
+                entities: entities
+            };
+        }
+
+        return {
+            text: `✅ Pedido confirmado:\n📦 ${cantidad} x ${plato}\n📍 ${direccion}, ${ciudad}\n📅 ${fecha} a las ${hora}\n📧 Confirmación a ${email}\n👤 A nombre de ${nombre}`,
+            entities: entities
+        };
+    }
+
+    if (intent === "ConsultarEstadoPedido") {
+        return {
+            text: "🔍 Tu pedido está en preparación. Para afinar la búsqueda, indícame tu email o la dirección del pedido.",
+            entities: entities
+        };
+    }
+
+    if (intent === "CancelarPedido") {
+        return {
+            text: "❌ De acuerdo, tramitando cancelación. Indícame tu email o la dirección del pedido.",
+            entities: entities
+        };
+    }
+
+    if (intent === "Recomendacion") {
+        return {
+            text: "🌟 Recomendación del día:\n🍝 Tortilla de patatas\n🍗 Pollo al curry\n🥗 Ensalada César",
+            entities: entities
+        };
+    }
+
+    return {
+        text: "❓ No lo he entendido. ¿Quieres crear un pedido, consultar estado, cancelar o pedir una recomendación?",
+        entities: {}
+    };
+}
+
+// =======================
+// Función para agregar mensajes al chat
+// =======================
+function addMessage(content, sender = "bot", entities = {}) {
+    const messageDiv = document.createElement("div");
+    messageDiv.className = `message ${sender}`;
+
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "message-content";
+    contentDiv.innerHTML = content;
+
+    messageDiv.appendChild(contentDiv);
+
+    // Mostrar entidades si existen
+    if (sender === "bot" && Object.keys(entities).length > 0) {
+        const infoDiv = document.createElement("div");
+        infoDiv.className = "message-info";
+        let infoText = "🏷️ Entidades: ";
+        for (const [key, values] of Object.entries(entities)) {
+            infoText += `${key}: ${values.join(", ")} | `;
+        }
+        infoDiv.textContent = infoText.slice(0, -3);
+        messageDiv.appendChild(infoDiv);
+    }
+
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+// =======================
+// Función para llamar a CLU
+// =======================
+async function callCLU(text) {
+    const url = `${ENDPOINT}language/:analyze-conversations?api-version=${API_VERSION}`;
+    
     const body = {
         kind: "Conversation",
         analysisInput: {
@@ -28,67 +135,86 @@ async function analyzeMessage(text) {
                 text: text
             }
         },
-        tasks: [{
-            kind: "ConversationTask",
-            taskName: "PollosHermanosIntent",
-            parameters: {
-                projectName: projectName,
-                deploymentName: deploymentName
-            }
-        }]
+        parameters: {
+            projectName: PROJECT_NAME,
+            deploymentName: DEPLOYMENT_NAME,
+            stringIndexType: "Utf16CodeUnit"
+        }
     };
 
-        try {
-        const res = await fetch(url, {
+    try {
+        const response = await fetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Ocp-Apim-Subscription-Key": apiKey
+                "Ocp-Apim-Subscription-Key": KEY,
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(body)
         });
-    
-        // primero verificamos que la respuesta sea JSON
-        const data = await res.json();
-    
-        // verificamos que data.tasks exista y tenga elementos
-        if (!data.tasks || !data.tasks[0] || !data.tasks[0].result || !data.tasks[0].result.prediction) {
-            console.error("Respuesta inesperada de CLU:", data);
-            return "Lo siento, hubo un error procesando tu mensaje (estructura inesperada).";
-        }
-    
-        const prediction = data.tasks[0].result.prediction;
-    
-        const intent = prediction.topIntent || "No detectado";
-        const entities = prediction.entities
-            ? prediction.entities.map(e => `${e.category}: ${e.text}`).join(", ")
-            : "";
-    
-        return `Intención: ${intent}. ${entities ? "Entidades: " + entities : ""}`;
-    } catch (err) {
-        console.error("Error en fetch:", err);
-        return "Lo siento, hubo un error procesando tu mensaje.";
-    }
 
+        if (!response.ok) {
+            throw new Error(`Error CLU: ${response.status} ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        return data.result.prediction;
+    } catch (error) {
+        console.error("Error llamando a CLU:", error);
+        throw error;
+    }
 }
 
-// Evento click del botón
-sendBtn.addEventListener("click", async () => {
-    const userMessage = chatInput.value.trim();
-    if (!userMessage) return;
+// =======================
+// Función para enviar mensaje
+// =======================
+async function sendMessage() {
+    const text = userInput.value.trim();
+    if (!text) return;
 
-    addMessage("Usuario", userMessage);
-    chatInput.value = "";
+    // Mostrar mensaje del usuario
+    addMessage(text, "user");
+    userInput.value = "";
+    sendBtn.disabled = true;
 
-    const botResponse = await analyzeMessage(userMessage);
-    addMessage("Bot", botResponse);
+    // Mostrar indicador de escritura
+    const loadingDiv = document.createElement("div");
+    loadingDiv.className = "message bot";
+    loadingDiv.innerHTML = `<div class="loading"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div></div>`;
+    messagesContainer.appendChild(loadingDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    try {
+        const prediction = await callCLU(text);
+        const topIntent = prediction.topIntent || "";
+        const entities = extractEntities(prediction);
+
+        const reply = buildReply(topIntent, entities);
+
+        // Remover loading
+        loadingDiv.remove();
+
+        // Agregar respuesta
+        addMessage(reply.text, "bot", reply.entities);
+    } catch (error) {
+        loadingDiv.remove();
+        addMessage(
+            `<div class="error-message"> Error: ${error.message}</div>`,
+            "bot"
+        );
+    } finally {
+        sendBtn.disabled = false;
+        userInput.focus();
+    }
+}
+
+// =======================
+// Enviar con Enter
+// =======================
+userInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+    }
 });
 
-// También permitir presionar Enter
-chatInput.addEventListener("keypress", function(e) {
-    if(e.key === "Enter") sendBtn.click();
-});
-
-
-
-
+sendBtn.addEventListener("click", sendMessage);
