@@ -3,28 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Pollos Hermanos - Chat Pedidos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chat Restaurante - CLU</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            max-height: 700px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            display: flex;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .message.user .message-content {
+            background: #667eea;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.bot .message-content {
+            background: #f0f0f0;
+            color: #333;
+            border-bottom-left-radius: 4px;
+        }
+
+        .message-info {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+            padding: 0 16px;
+        }
+
+        .input-section {
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-section input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .input-section input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-section button {
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .input-section button:hover {
+            background: #764ba2;
+        }
+
+        .input-section button:active {
+            transform: scale(0.98);
+        }
+
+        .input-section button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .loading {
+            display: flex;
+            gap: 6px;
+            padding: 12px 16px;
+        }
+
+        .loading-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #667eea;
+            animation: bounce 1.4s infinite;
+        }
+
+        .loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .entity-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="assets/logo.png" alt="Logo Los Pollos Hermanos" class="logo">
-        <h1>Los Pollos Hermanos - Pedidos Online</h1>
-        <p>¡Haz tu pedido fácilmente desde nuestro chat!</p>
-    </header>
-
-    <main>
-        <div class="chat-container">
-            <div id="chatOutput" class="chat-output"></div>
-            <input type="text" id="chatInput" placeholder="Escribe tu pedido..." />
-            <button class="btn" id="sendBtn">Enviar</button>
+    <div class="container">
+        <div class="header">
+            <h1>🍽️ Chat Restaurante</h1>
+            <p>Asistente de pedidos con IA</p>
         </div>
-    </main>
 
-    <footer>
-        &copy; 2026 Los Pollos Hermanos | Todos los derechos reservados
-    </footer>
+        <div class="chat-messages" id="messagesContainer">
+            <div class="message bot">
+                <div>
+                    <div class="message-content">
+                        ¡Hola! Soy tu asistente de pedidos. ¿Qué necesitas? Puedo ayudarte a:
+                        <br><br>
+                        ✅ Crear un pedido<br>
+                        ✅ Consultar estado de pedido<br>
+                        ✅ Cancelar pedido<br>
+                        ✅ Recomendación del día
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="input-section">
+            <input type="text" id="userInput" placeholder="Escribe tu pedido..." />
+            <button id="sendBtn" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        const ENDPOINT = "https://clurestaurante.cognitiveservices.azure.com/";
+        const KEY = "BtWFDvv7v26a6fHzA7SyG8x21fcuk30ySEq9E6HwUyl2r1csVABHJQQJ99CAACI8hq2XJ3w3AAAaACOGufeY";
+        const PROJECT_NAME = "CLURestaurante";
+        const DEPLOYMENT_NAME = "production";
+        const API_VERSION = "2023-04-01";
+
+        const messagesContainer = document.getElementById("messagesContainer");
+        const userInput = document.getElementById("userInput");
+        const sendBtn = document.getElementById("sendBtn");
+
+        // Permitir enviar con Enter
+        userInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        async function callCLU(text) {
+            const url = `${ENDPOINT}language/:analyze-conversations?api-version=${API_VERSION}`;
+            
+            const body = {
+                kind: "Conversation",
+                analysisInput: {
+                    conversationItem: {
+                        id: "1",
+                        participantId: "user",
+                        text: text
+                    }
+                },
+                parameters: {
+                    projectName: PROJECT_NAME,
+                    deploymentName: DEPLOYMENT_NAME,
+                    stringIndexType: "Utf16CodeUnit"
+                }
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Ocp-Apim-Subscription-Key": KEY,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(body)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error CLU: ${response.status} ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                return data.result.prediction;
+            } catch (error) {
+                console.error("Error llamando a CLU:", error);
+                throw error;
+            }
+        }
+
+        function extractEntities(prediction) {
+            const entities = {};
+            for (const ent of prediction.entities || []) {
+                const category = ent.category;
+                const text = ent.text;
+                if (category && text) {
+                    if (!entities[category]) {
+                        entities[category] = [];
+                    }
+                    entities[category].push(text);
+                }
+            }
+            return entities;
+        }
+
+        function buildReply(intent, entities) {
+            if (intent === "CrearPedido") {
+                const plato = (entities.plato || [""])[0];
+                const cantidad = (entities.cantidad || [""])[0];
+                const ciudad = (entities.ciudad || [""])[0];
+                const fecha = (entities.fecha || [""])[0];
+                const hora = (entities.hora || [""])[0];
+                const direccion = (entities.direccion || [""])[0];
+                const nombre = (entities.nombre_cliente || [""])[0];
+                const email = (entities.email || [""])[0];
+
+                const missing = [];
+                if (!plato) missing.push("plato");
+                if (!cantidad) missing.push("cantidad");
+                if (!ciudad) missing.push("ciudad");
+                if (!fecha) missing.push("fecha");
+                if (!hora) missing.push("hora");
+                if (!direccion) missing.push("dirección");
+                if (!nombre) missing.push("nombre");
+                if (!email) missing.push("email");
+
+                if (missing.length > 0) {
+                    return {
+                        text: `✏️ Para tramitar el pedido, indícame: ${missing.join(", ")}.`,
+                        entities: entities
+                    };
+                }
+
+                return {
+                    text: `✅ Pedido confirmado:\n📦 ${cantidad} x ${plato}\n📍 ${direccion}, ${ciudad}\n📅 ${fecha} a las ${hora}\n📧 Confirmación a ${email}\n👤 A nombre de ${nombre}`,
+                    entities: entities
+                };
+            }
+
+            if (intent === "ConsultarEstadoPedido") {
+                return {
+                    text: "🔍 Tu pedido está en preparación. Para afinar la búsqueda, indícame tu email o la dirección del pedido.",
+                    entities: entities
+                };
+            }
+
+            if (intent === "CancelarPedido") {
+                return {
+                    text: "❌ De acuerdo, tramitando cancelación. Indícame tu email o la dirección del pedido.",
+                    entities: entities
+                };
+            }
+
+            if (intent === "Recomendacion") {
+                return {
+                    text: "🌟 Recomendación del día:\n🍝 Tortilla de patatas\n🍗 Pollo al curry\n🥗 Ensalada César",
+                    entities: entities
+                };
+            }
+
+            return {
+                text: "❓ No lo he entendido. ¿Quieres crear un pedido, consultar estado, cancelar o pedir una recomendación?",
+                entities: {}
+            };
+        }
+
+        function addMessage(content, sender = "bot", entities = {}) {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = `message ${sender}`;
+
+            const contentDiv = document.createElement("div");
+            contentDiv.className = "message-content";
+            contentDiv.innerHTML = content;
+
+            messageDiv.appendChild(contentDiv);
+
+            if (sender === "bot" && Object.keys(entities).length > 0) {
+                const infoDiv = document.createElement("div");
+                infoDiv.className = "message-info";
+                let infoText = "🏷️ Entidades: ";
+                for (const [key, values] of Object.entries(entities)) {
+                    infoText += `${key}: ${values.join(", ")} | `;
+                }
+                infoDiv.textContent = infoText.slice(0, -3);
+                messageDiv.appendChild(infoDiv);
+            }
+
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            // Mostrar mensaje del usuario
+            addMessage(text, "user");
+            userInput.value = "";
+            sendBtn.disabled = true;
+
+            // Mostrar indicador de escritura
+            const loadingDiv = document.createElement("div");
+            loadingDiv.className = "message bot";
+            loadingDiv.innerHTML = `<div class="loading"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div></div>`;
+            messagesContainer.appendChild(loadingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            try {
+                const prediction = await callCLU(text);
+                const topIntent = prediction.topIntent || "";
+                const entities = extractEntities(prediction);
+
+                const reply = buildReply(topIntent, entities);
+
+                // Remover loading
+                loadingDiv.remove();
+
+                // Agregar respuesta
+                addMessage(reply.text, "bot", reply.entities);
+            } catch (error) {
+                loadingDiv.remove();
+                addMessage(
+                    `<div class="error-message">⚠️ Error: ${error.message}</div>`,
+                    "bot"
+                );
+            } finally {
+                sendBtn.disabled = false;
+                userInput.focus();
+            }
+        }
+    </script>
 </body>
 </html>
