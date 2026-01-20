@@ -441,16 +441,22 @@
 
             try {
                 const prediction = await callCLU(text);
-                const topIntent = prediction.topIntent || "";
+                // Extraer texto que el modelo devuelva (si tu modelo lo tiene)
                 const entities = extractEntities(prediction);
-
-                const reply = buildReply(topIntent, entities);
-
+                let replyText = prediction.resultText || ""; // si tu CLU devuelve un campo de texto
+                if (!replyText && prediction.topIntent) {
+                    // fallback a tu buildReply si no hay texto
+                    const topIntent = prediction.topIntent;
+                    const builtReply = buildReply(topIntent, entities);
+                    replyText = builtReply.text;
+                }
+                
                 // Remover loading
                 loadingDiv.remove();
+                
+                // Agregar respuesta del modelo
+                addMessage(replyText, "bot", entities);
 
-                // Agregar respuesta
-                addMessage(reply.text, "bot", reply.entities);
             } catch (error) {
                 loadingDiv.remove();
                 addMessage(
@@ -465,6 +471,7 @@
     </script>
 </body>
 </html>
+
 
 
 
