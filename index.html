@@ -11,17 +11,20 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), url('assets/fondo.png');
-            background-size: cover;
-            background-blend-mode: overlay;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+            body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%), url('assets/fondo.png');
+        background-size: cover;         /* hace que la imagen cubra todo el fondo */
+        background-position: center;    /* centra la imagen */
+        background-repeat: no-repeat;   /* evita que se repita */
+        background-blend-mode: overlay; /* mezcla con el gradiente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
 
         .container {
             width: 100%;
@@ -462,5 +465,6 @@
     </script>
 </body>
 </html>
+
 
 
