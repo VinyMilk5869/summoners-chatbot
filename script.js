@@ -38,7 +38,7 @@ async function analyzeMessage(text) {
         }]
     };
 
-    try {
+        try {
         const res = await fetch(url, {
             method: "POST",
             headers: {
@@ -47,17 +47,29 @@ async function analyzeMessage(text) {
             },
             body: JSON.stringify(body)
         });
-
+    
+        // primero verificamos que la respuesta sea JSON
         const data = await res.json();
+    
+        // verificamos que data.tasks exista y tenga elementos
+        if (!data.tasks || !data.tasks[0] || !data.tasks[0].result || !data.tasks[0].result.prediction) {
+            console.error("Respuesta inesperada de CLU:", data);
+            return "Lo siento, hubo un error procesando tu mensaje (estructura inesperada).";
+        }
+    
         const prediction = data.tasks[0].result.prediction;
-        const intent = prediction.topIntent;
-        const entities = prediction.entities.map(e => `${e.category}: ${e.text}`).join(", ");
-
+    
+        const intent = prediction.topIntent || "No detectado";
+        const entities = prediction.entities
+            ? prediction.entities.map(e => `${e.category}: ${e.text}`).join(", ")
+            : "";
+    
         return `Intención: ${intent}. ${entities ? "Entidades: " + entities : ""}`;
     } catch (err) {
-        console.error(err);
+        console.error("Error en fetch:", err);
         return "Lo siento, hubo un error procesando tu mensaje.";
     }
+
 }
 
 // Evento click del botón
@@ -76,6 +88,7 @@ sendBtn.addEventListener("click", async () => {
 chatInput.addEventListener("keypress", function(e) {
     if(e.key === "Enter") sendBtn.click();
 });
+
 
 
 
